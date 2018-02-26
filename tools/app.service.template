@@ -1,0 +1,17 @@
+# cp `pwd`/backend.service /etc/systemd/system/
+[Unit]
+Description={Project Name}
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory={path}
+ExecStart=/bin/gunicorn run:backend -c gunicorn_http_config.py
+LimitNOFILE=10485760
+LimitNPROC=10485760
+LimitCORE=infinity
+MountFlags=slave
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

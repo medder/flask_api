@@ -1,0 +1,6 @@
+-r requirements.txt
+flask_migrate
+flask_script
+yapf
+isort
+flake8

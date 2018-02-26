@@ -1,0 +1,12 @@
+version: '3'
+services:
+  backend:
+    build: .
+    command: 'gunicorn run:backend -c gunicorn_http_config.py'
+    volumes:
+      - '.:/service'
+    environment:
+      ACCESSLOG: '-'
+      ERRORLOG: '-'
+    ports:
+      - '5000:5000'
