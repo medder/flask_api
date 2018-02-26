@@ -5,10 +5,4 @@ gevent
 PyMySQL
 gunicorn
 smart-getenv
-requests
-kazoo
-elasticsearch-dsl>=5.0.0,<6.0.0
-flask-jwt
-oss2
-Pillow
 Flask-Excel

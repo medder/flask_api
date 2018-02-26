@@ -9,14 +9,6 @@ from flask import Response
 from flask_sqlalchemy import Pagination
 
 
-class PhotoPage(object):
-    def __init__(self, items, page, pages, total):
-        self.items = items
-        self.page = page
-        self.pages = pages
-        self.total = total
-
-
 class Jsonized(object):
 
     _raw = {}
@@ -42,7 +34,7 @@ class JSONEncoder(json.JSONEncoder):
             return obj.strftime('%H:%M')
         if isinstance(obj, Decimal):
             return float(obj)
-        if isinstance(obj, (Pagination, PhotoPage)):
+        if isinstance(obj, Pagination):
             return {
                 "result": obj.items,
                 "current": obj.page,
