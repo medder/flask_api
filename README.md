@@ -1,4 +1,4 @@
-# 基于flask的广告后台
+# 基于flask的开发api框架
 
 ![pyversions](https://img.shields.io/badge/python%20-3.6%2B-blue.svg)
 
