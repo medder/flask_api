@@ -14,6 +14,11 @@ class Example(BaseModelMixin):
         nullable=False,
         info=dict(creatable=True, editable=True))
     # 用户名称
-    name = db.Column(
+    name = db.Column(db.String(50), info=dict(creatable=True, editable=True))
+    # city
+    city = db.Column(
         db.String(50),
+        server_default='test',
         info=dict(creatable=True, editable=True))
+    # test default
+    d_defalt = db.Column(db.String(50), default='default')
